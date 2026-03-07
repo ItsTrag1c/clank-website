@@ -26,7 +26,7 @@ export const APP_DATA = {
   build: {
     name: "LlamaTalk Build",
     tagline: "AI agent that codes alongside you",
-    description: "ReAct-style AI with 14 built-in tools, project memory, and file generation. The power of Claude in your codebase.",
+    description: "ReAct-style AI with 14 built-in tools, project memory, and file generation.",
     color: "build",
     github: "ItsTrag1c/LlamaTalk-Build",
     features: ["14 Tools", "ReAct Agent", "Project Memory", "File Generation"],

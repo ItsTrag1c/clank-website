@@ -38,7 +38,7 @@ function AppCard({ appKey }: { appKey: AppKey }) {
       <div className="p-5">
         {/* Header */}
         <div className="flex items-start justify-between mb-4">
-          <div className="w-10 h-10 rounded-lg bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-lg bg-[rgba(249,115,22,0.1)] border border-[rgba(249,115,22,0.2)] flex items-center justify-center">
             <Icon className="w-5 h-5 text-[var(--accent)]" />
           </div>
           <span className="text-xs text-[var(--text-dim)] font-mono">v{version}</span>
