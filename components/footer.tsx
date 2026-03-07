@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Github } from "lucide-react";
 
 const repos = [
-  { name: "LlamaChat v1", href: "https://github.com/ItsTrag1c/LlamaTalk-Desktop" },
+  { name: "LlamaTalk Chat", href: "https://github.com/ItsTrag1c/LlamaTalk-Desktop" },
   { name: "LlamaTalk CLI", href: "https://github.com/ItsTrag1c/LlamaTalk-CLI" },
   { name: "LlamaTalk Build", href: "https://github.com/ItsTrag1c/LlamaTalk-Build" },
 ];

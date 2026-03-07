@@ -8,7 +8,7 @@ export type AppKey = keyof typeof VERSIONS;
 
 export const APP_DATA = {
   chat: {
-    name: "LlamaChat v1",
+    name: "LlamaTalk Chat",
     tagline: "Beautiful desktop chat interface",
     description: "Frameless window, floating assistant, system tray integration. Built with React 19 + Vite 7 + Tauri 2.",
     color: "chat",
