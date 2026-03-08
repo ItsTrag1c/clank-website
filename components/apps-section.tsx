@@ -3,10 +3,11 @@
 import { Monitor, Terminal, Wrench, ExternalLink, Download, Bot, FileCode, Brain, ShieldCheck } from "lucide-react";
 import { APP_DATA, VERSIONS, getDownloadUrl, type AppKey } from "@/lib/versions";
 
-const icons = {
+const icons: Record<string, typeof Monitor> = {
   chat: Monitor,
   cli: Terminal,
   build: Wrench,
+  buildDesktop: Monitor,
 };
 
 export function AppsSection() {
