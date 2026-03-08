@@ -25,7 +25,7 @@ export const APP_DATA = {
     features: ["REPL Mode", "One-shot Mode", "Streaming Output", "8 Providers"],
   },
   build: {
-    name: "LlamaTalk Build",
+    name: "LlamaTalk Build CLI",
     tagline: "Agentic coding from the terminal",
     description: "A ReAct-style coding agent with 14 tools, project memory, plan/build modes, and session history. Reads, writes, and executes — so you can focus on the problem, not the plumbing.",
     color: "build",
