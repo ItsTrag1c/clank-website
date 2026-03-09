@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Github } from "lucide-react";
 
 const repos = [
@@ -47,9 +48,17 @@ export function Footer() {
           <p className="text-xs text-[var(--text-dim)]">
             &copy; 2025&ndash;2026 ItsTrag1c
           </p>
-          <p className="text-xs text-[var(--text-dim)]">
-            MIT License
-          </p>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/privacy"
+              className="text-xs text-[var(--text-dim)] hover:text-[var(--text)] transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <p className="text-xs text-[var(--text-dim)]">
+              MIT License
+            </p>
+          </div>
         </div>
       </div>
     </footer>
