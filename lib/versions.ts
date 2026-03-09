@@ -1,8 +1,8 @@
 export const VERSIONS = {
   chat: "0.16.1",
   cli: "0.9.13",
-  build: "2.1.0",
-  buildDesktop: "0.2.0",
+  build: "2.1.1",
+  buildDesktop: "2.1.1",
 } as const;
 
 export type AppKey = keyof typeof VERSIONS;
@@ -46,7 +46,7 @@ export function getDownloadUrl(app: AppKey, type: "installer" | "standalone" = "
   const version = VERSIONS[app];
   const repo = APP_DATA[app].github;
   // Build Desktop releases are on the Build repo (same release includes CLI + Desktop)
-  const releaseTag = app === "buildDesktop" ? `v${VERSIONS.build}` : `v${version}`;
+  const releaseTag = app === "buildDesktop" ? `desktop-v${version}` : `v${version}`;
   const base = `https://github.com/${repo}/releases/download/${releaseTag}`;
 
   if (app === "chat") {
@@ -60,11 +60,11 @@ export function getDownloadUrl(app: AppKey, type: "installer" | "standalone" = "
 
   if (app === "buildDesktop") {
     if (platform === "mac") {
-      return `${base}/LlamaTalk.Build.Desktop_${version}_aarch64.dmg`;
+      return `${base}/LlamaTalk Build Desktop_${version}_aarch64.dmg`;
     }
     return type === "installer"
-      ? `${base}/LlamaTalk.Build.Desktop_${version}_x64-setup.exe`
-      : `${base}/LlamaTalk.Build.Desktop_${version}_x64-setup.exe`;
+      ? `${base}/LlamaTalk Build Desktop_${version}_x64-setup.exe`
+      : `${base}/LlamaTalk Build Desktop_${version}_x64-setup.exe`;
   }
 
   const name = app === "cli" ? "LlamaTalkCLI" : "LlamaTalkBuild";
