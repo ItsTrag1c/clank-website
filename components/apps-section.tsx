@@ -4,32 +4,30 @@ import { Monitor, Terminal, Wrench, ExternalLink, Download, Bot, FileCode, Brain
 import { APP_DATA, VERSIONS, getDownloadUrl, type AppKey } from "@/lib/versions";
 
 const icons: Record<string, typeof Monitor> = {
-  chat: Monitor,
-  cli: Terminal,
-  build: Wrench,
-  buildDesktop: Monitor,
+  cli: Wrench,
+  desktop: Monitor,
 };
 
 export function AppsSection() {
   return (
     <section className="py-20 px-6" id="apps">
       <div className="max-w-5xl mx-auto">
-        {/* Build — Spotlight */}
+        {/* CLI — Spotlight */}
         <h2 className="text-2xl font-bold mb-2">The Flagship</h2>
         <p className="text-[var(--text-muted)] text-sm mb-8">
           An agentic coding assistant that runs on your machine.
         </p>
 
-        <BuildSpotlight />
+        <CLISpotlight />
 
-        {/* Build Desktop + Chat + CLI — Companion tools */}
+        {/* Desktop — Companion tool */}
         <h3 className="text-lg font-semibold mt-16 mb-2">Companion Tools</h3>
         <p className="text-[var(--text-muted)] text-sm mb-8">
           Same ecosystem, same providers. Pick what fits the moment.
         </p>
 
         <div className="grid md:grid-cols-3 gap-4">
-          {(["buildDesktop", "chat", "cli"] as AppKey[]).map((key) => (
+          {(["desktop"] as AppKey[]).map((key) => (
             <AppCard key={key} appKey={key} />
           ))}
         </div>
@@ -38,9 +36,9 @@ export function AppsSection() {
   );
 }
 
-function BuildSpotlight() {
-  const app = APP_DATA.build;
-  const version = VERSIONS.build;
+function CLISpotlight() {
+  const app = APP_DATA.cli;
+  const version = VERSIONS.cli;
 
   const highlights = [
     { icon: Bot, label: "ReAct Agent", desc: "Iterative reason-and-act loop with streaming tool calls" },
@@ -88,11 +86,11 @@ function BuildSpotlight() {
 
         <div className="flex gap-2">
           <a
-            href={getDownloadUrl("build")}
+            href={getDownloadUrl("cli")}
             className="inline-flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium rounded-lg bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white transition-colors"
           >
             <Download className="w-4 h-4" />
-            Download Build
+            Download CLI
           </a>
           <a
             href={`https://github.com/${app.github}`}
@@ -141,7 +139,7 @@ function AppCard({ appKey }: { appKey: AppKey }) {
 
         <div className="flex gap-2">
           <a
-            href={appKey === "cli" ? "#download" : getDownloadUrl(appKey)}
+            href={getDownloadUrl(appKey)}
             className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-medium rounded-md bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white transition-colors"
           >
             <Download className="w-3.5 h-3.5" />

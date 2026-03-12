@@ -137,7 +137,7 @@ export default function PrivacyPolicy() {
             <p>
               Questions about this policy? Open an issue on{" "}
               <a
-                href="https://github.com/ItsTrag1c/Clank-Chat/issues"
+                href="https://github.com/ItsTrag1c/Clank-Build/issues"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[var(--accent)] hover:underline"

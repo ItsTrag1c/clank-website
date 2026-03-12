@@ -32,11 +32,11 @@ export function Hero() {
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
-            href={getDownloadUrl("build")}
+            href={getDownloadUrl("cli")}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white text-sm font-medium transition-colors"
           >
             <Download className="w-4 h-4" />
-            Download Clank Build CLI
+            Download Clank CLI
           </a>
           <a
             href="#apps"

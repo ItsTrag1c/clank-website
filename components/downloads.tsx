@@ -3,7 +3,7 @@
 import { Download, Apple, Monitor } from "lucide-react";
 import { APP_DATA, VERSIONS, getDownloadUrl, type AppKey } from "@/lib/versions";
 
-const desktopApps = new Set<AppKey>(["chat", "buildDesktop"]);
+const desktopApps = new Set<AppKey>(["desktop"]);
 
 export function Downloads() {
   return (
@@ -15,7 +15,7 @@ export function Downloads() {
         </p>
 
         <div className="space-y-3">
-          {(["build", "buildDesktop", "chat", "cli"] as AppKey[]).map((key) => (
+          {(["cli", "desktop"] as AppKey[]).map((key) => (
             <DownloadRow key={key} appKey={key} />
           ))}
         </div>

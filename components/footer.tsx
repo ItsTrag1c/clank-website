@@ -3,8 +3,7 @@ import Link from "next/link";
 import { Github } from "lucide-react";
 
 const repos = [
-  { name: "Clank Chat", href: "https://github.com/ItsTrag1c/Clank-Chat" },
-  { name: "Clank Build", href: "https://github.com/ItsTrag1c/Clank-Build" },
+  { name: "Clank", href: "https://github.com/ItsTrag1c/Clank-Build" },
 ];
 
 export function Footer() {
